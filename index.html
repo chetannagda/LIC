@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chetan Nagda - NFC Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Insurance Agent - DHEERAJ KUMARI NAGDA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4a148c;
-            --secondary-color: #7c43bd;
+            --primary-color: #003366;
+            --secondary-color: #0066cc;
             --text-color: #333;
-            --bg-color: #f5f5f5;
+            --bg-color: #f0f5f9;
         }
 
         * {
@@ -20,7 +20,7 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background: var(--bg-color);
             color: var(--text-color);
             display: flex;
@@ -37,27 +37,25 @@
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            position: relative;
         }
 
         .banner {
-            width: 100%;
-            height: 150px;
+            width: 101%;
+            height: 200px;
             background: var(--primary-color);
-            background-image: url(./assests/Programer-_-Background.svg); /* Replace this with your image URL or path */
-            background-size: cover; /* Ensures the image covers the whole banner */
-            background-position: center; /* Centers the image within the banner */
+            background-image: url('./images/Lic\ of\ India.jpeg');
+            background-size: cover;
+            background-position: center;
             position: relative;
         }
-        
 
         .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             position: absolute;
-            top: 90px;
-            left: 22%;
+            top: 122px;
+            left: 50%;
             transform: translateX(-50%);
             border: 5px solid #ffffff;
             object-fit: cover;
@@ -67,21 +65,32 @@
 
         .content {
             text-align: center;
-            padding: 130px 30px 30px;
+            padding: 100px 30px 30px;
         }
 
         h1 {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
             color: var(--primary-color);
-            font-weight: 600;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .description-container {
+            margin-bottom: 30px;
+            height: 100px;
+            overflow: hidden;
         }
 
         .description {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #666;
-            margin-bottom: 30px;
             line-height: 1.6;
+            margin: 0;
         }
 
         .social-icons,
@@ -103,63 +112,60 @@
             height: 60px;
             border-radius: 50%;
             background: #f0f0f0;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             transition: all 0.3s ease;
         }
 
-        .social-icons a:hover[title="Email"] {
-            background: #d93025;
-        }
-
-        .social-icons a:hover[title="Instagram"] {
-            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
-        }
-
-        .social-icons a:hover[title="LinkedIn"] {
-            background: #0077b5;
-        }
-
-        .social-icons a:hover[title="GitHub"] {
-            background: #564b4b;
-            color: #ffffff;
-        }
-
-        .social-icons a:hover[title="Website"] {
-            background: #ffffff;
-            color: #000000;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .social-icons a:hover[title="Send SMS"] {
-            background: #1e88e5;
-        }
-
-        .action-buttons a:hover[title="WhatsApp"] {
-            background: #25d366;
-        }
-
-        .action-buttons a:hover[title="Google Pay"] {
-            background: linear-gradient(45deg, #4285f4, #ea4335, #fbbc05);
-        }
-
-        .action-buttons a:hover[title="Call or Save Contact"] {
-            background: #1976d2;
-            color: #ffffff;
+        .social-icons a:hover,
+        .action-buttons a:hover {
+            background: var(--secondary-color);
+            transform: scale(1.1);
         }
 
         .social-icons img,
         .action-buttons img {
-            width: 35px;
-            height: 35px;
+            width: 30px;
+            height: 30px;
             transition: transform 0.3s ease;
         }
 
-        .social-icons a:hover img,
-        .action-buttons a:hover img {
+        .social-icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
             transform: scale(1.1);
         }
+        
+        /* WhatsApp Hover - Green */
+        .social-icons a[href*="wa.me"]:hover {
+            background: #25D366; /* WhatsApp Green */
+        }
+        
+        /* Gmail Hover - Red */
+        .social-icons a[href*="mailto"]:hover {
+            background: #D44638; /* Gmail Red */
+        }
+        
+        /* Call Hover - Default Blue (unchanged) */
+        .social-icons a[href*="tel"]:hover {
+            background: var(--secondary-color);
+        }
+        
+        /* Save Contact Hover - Default Blue (unchanged) */
+        .social-icons a#add-contact:hover {
+            background: var(--secondary-color);
+        }
+        
 
-        /* Modal styles */
         .modal {
             display: none;
             position: fixed;
@@ -203,38 +209,68 @@
 <body>
     <div class="container">
         <div class="banner"></div>
-        <img src="./assests/Profile.jpg" alt="Chetan Nagda" class="profile-pic">
+        <img src="./images/Profile_Pic.jpg" alt="Dheeraj Kumari Nagda" class="profile-pic">
         <div class="content">
-            <h1>Chetan Nagda</h1>
-            <p class="description">Hi, I'm Chetan Nagda. Let's connect and create something amazing together!</p>
+            <h1>DHEERAJ KUMARI NAGDA</h1>
+            <b><p class="title">Insurance Agent || Financial Advisor</p></b>
+            <div class="description-container">
+                <p class="description"></p>
+            </div>
 
             <div class="social-icons">
-                <a href="mailto:chetan23rd@gmail.com" title="Email"><img src="./assests/icons8-gmail.svg" alt="Gmail"></a>
-                <a href="https://instagram.com/chetannagdaa" title="Instagram"><img src="./assests/icons8-instagram.svg" alt="Instagram"></a>
-                <a href="https://www.linkedin.com/in/chetan-nagda?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn"><img src="./assests/icons8-linkedin.svg" alt="LinkedIn"></a>
-                <a href="https://github.com/chetannagda" title="GitHub"><img src="./assests/icons8-github.svg" alt="GitHub"></a>
-                <a href="https://lakecityproperties.in" title="Website"><img src="./assests/icons8-url-50.png" alt="Website"></a>
-                <a href="sms:+91 6367426746?body=Hi%20Chetan" title="Send SMS"><img src="./assests/Google_Messages_icon_(2022).svg.svg" alt="SMS"></a>
+                <a href="mailto:dheerajnagda9164@gmail.com" title="Email"><img src="./images/icons8-gmail.svg" alt="Email"></a>
+                <a href="https://wa.me/9001253109" title="WhatsApp"><img src="./images/icons8-whatsapp.svg" alt="WhatsApp"></a>
+                <a href="tel:+919001253109" title="Call"><img src="./images/icons8-call-48.png" alt="Call"></a>
+                <a href="#" id="add-contact" title="Save Contact"><img src="./images/Google_Contacts_icon_(2022).svg.svg" alt="Save Contact"></a>
             </div>
 
             <div class="action-buttons">
-                <a href="https://wa.me/6367426746?text=Hi" title="WhatsApp"><img src="./assests/icons8-whatsapp.svg" alt="WhatsApp"></a>
-                <a href="upi://pay?pa=chetan23rd-1@oksbi&pn=Chetan%20Nagda&aid=uGICAgIDToI7cDA&appid=com.google.android.apps.nbu.pps.google" title="Google Pay">
-                  <img src="./assests/icons8-google-pay.svg" alt="Google Pay">
-                </a>          
-                <a href="tel:+91 6367426746" id="add-contact" title="Call or Save Contact">
-                    <img src="./assests/Google_Contacts_icon_(2022).svg.svg" alt="Add to Contacts">
-                </a>
+                
             </div>
         </div>
     </div>
 
     <div class="modal" id="image-modal">
         <button class="close-btn" id="close-modal">&times;</button>
-        <img src="./assests/Profile.jpg" alt="Chetan Nagda">
+        <img src="./images/Profile_Pic.jpg" alt="Dheeraj Kumari Nagda">
     </div>
 
     <script>
+        const descriptionContainer = document.querySelector('.description-container');
+        const descriptionText = document.querySelector('.description');
+
+        const descriptionPoints = [
+            "Dedicated LIC Insurance Agent with over 3 years of experience.",
+            "Specializing in life insurance, retirement planning, and wealth management.",
+            "Committed to providing personalized financial solutions for every client.",
+            "Proven track record of helping families secure their financial future.",
+            "Staying updated with the latest insurance products and market trends.",
+            "Building long-term relationships based on trust and exceptional service."
+        ];
+
+        function updateDescription(index) {
+            descriptionText.textContent = '';
+            let typingIndex = 0;
+            const typingSpeed = 50;
+            const typingInterval = setInterval(() => {
+                if (typingIndex < descriptionPoints[index].length) {
+                    descriptionText.textContent = descriptionPoints[index].slice(0, typingIndex + 1);
+                    typingIndex++;
+                } else {
+                    clearInterval(typingInterval);
+                }
+            }, typingSpeed);
+        }
+
+        let descriptionIndex = 0;
+
+        setInterval(() => {
+            updateDescription(descriptionIndex);
+            descriptionIndex = (descriptionIndex + 1) % descriptionPoints.length;
+        }, 10000);
+
+        updateDescription(0);
+
         const profilePic = document.querySelector('.profile-pic');
         const modal = document.getElementById('image-modal');
         const closeModal = document.getElementById('close-modal');
@@ -250,6 +286,28 @@
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.style.display = 'none';
+            }
+        });
+
+        document.getElementById('add-contact').addEventListener('click', function(e) {
+            e.preventDefault();
+            const contact = {
+                name: "Dheeraj Kumari Nagda",
+                phone: "+919001253109",
+                email: "dheerajnagda9164@gmail.com"
+            };
+            
+            if ('contacts' in navigator && 'ContactsManager' in window) {
+                const props = ['Dheeraj Kumari Nagda', 'dheerajnagda9164@gmail.com', '+919001253109'];
+                const opts = {multiple: false};
+                navigator.contacts.select(props, opts).then((contacts) => {
+                    const contact = contacts[0];
+                    console.log(contact);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            } else {
+                alert("Contact saving is not supported in this browser. Please add the contact manually.");
             }
         });
     </script>
